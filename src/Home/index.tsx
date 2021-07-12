@@ -12,13 +12,13 @@ export function Home() {
 
     const operators = ["+", "-", "x", "÷"]
     const [currentNumber, setCurrentNumber] = useState("");
-    const [result, setResult] = useState(0);
+
 
     function handleCalculate(value: string) {
         const matchValueString = value.replace("x", "*").replace("÷", "/");
         const matchValueNumber = eval(matchValueString);
         const result = matchValueNumber
-        console.log(result, matchValueString)
+
 
         return setCurrentNumber(currentNumber.substring(0, currentNumber.length - currentNumber.length) + matchValueNumber);
 
@@ -30,7 +30,7 @@ export function Home() {
                 Calculadora Criativa
             </Text>
             <View style={styles.screen}>
-                <Text style={styles.text}>{result < 0 ? result : currentNumber}</Text>
+                <Text style={styles.text}>{currentNumber}</Text>
 
                 <Button title="C" onPress={() => (setCurrentNumber(currentNumber.substring(0, currentNumber.length - 1)))} />
             </View>
@@ -40,7 +40,18 @@ export function Home() {
                     {numbers.map((number) =>
                         <Button title={number} activeOpacity={0.5} onPress={() => (setCurrentNumber(currentNumber + number))} />
                     )}
-                    <Button title="=" match activeOpacity={0.5} onPress={() => (handleCalculate(currentNumber))} />
+                    <Button
+                        title="="
+                        match
+                        activeOpacity={0.5}
+                        onPress={() => (
+                            currentNumber.substr(-1, 1) === "+"
+                                || currentNumber.substr(-1, 1) === "-"
+                                || currentNumber.substr(-1, 1) === "x"
+                                || currentNumber.substr(-1, 1) === "÷" ? null
+                                :
+                                handleCalculate(currentNumber))}
+                    />
                 </View>
 
                 <View style={styles.operators}>
