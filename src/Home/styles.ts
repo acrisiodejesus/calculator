@@ -22,8 +22,19 @@ export const styles = StyleSheet.create({
         width: 350,
         height: 120,
         backgroundColor: '#3A3F50',
-        borderRadius: 24
+        borderRadius: 24,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center'
 
+    },
+    text: {
+        color: '#DEDEDE',
+        fontWeight: '100',
+        fontSize: 24,
+        paddingHorizontal: 20,
+        flexWrap: 'wrap',
+        width: '80%'
     },
     keyboard: {
         width: '100%',
