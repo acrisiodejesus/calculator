@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "gameplay",
-    "slug": "gameplay",
+    "name": "Calculadora Criativa",
+    "slug": "calculadoracriativa",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -17,13 +17,17 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sejacriativo.calculadoracriativa",
+      "buildNumber": "1.0.0"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
+        "backgroundColor": "#1B2338"
+      },
+      "package": "com.sejacriativo.calculadoracriativa",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
