@@ -1,4 +1,4 @@
-![Image] (./assets/icon.png "Icon")
+![Image](assets/icon.png "Icon")
 
 Calculadora Criativa (Projecto de Estudo)
 =========================================
